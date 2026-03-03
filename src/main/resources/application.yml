@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: task-manager
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Task Manager
+    version: 1.0.0
+    description: Production-ready Task Management Microservice
